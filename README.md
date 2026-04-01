@@ -1,14 +1,17 @@
 # iba-claw-starter
 
-**IBA-Governed version of claw-code**
+**The first simple IBA-governed starter for claw-code**
 
-Combines the popular claw-code harness (from the Anthropic Claude Code leak) with **GRK Intent-Bound Authorization**.
+Everyone is forking claw-code (the Python rewrite of the leaked Anthropic Claude Code architecture) to add more power.
 
-While everyone rushes to add more power to claw-code, this adds the critical missing layer: every agent action must match a cryptographically signed human intent.
+This repo adds the missing piece: **Intent-Bound Authorization (IBA)** from the GRK Governing Layer.
 
-## Why this matters
-The Anthropic leak proved that internal guardrails ("Undercover Mode") fail when the system itself is exposed.  
-IBA enforces safety at the architectural level — before any tool call, memory write, or git action.
+Every action (tool call, memory write, git commit, etc.) must match a cryptographically signed human intent — exactly what Anthropic failed to enforce.
+
+## Features
+- Simple IBA validator (pre-action enforcement)
+- Clear "ALLOWED" vs "BLOCKED" examples
+- Easy to plug into real claw-code functions
 
 ## Quick Start
 ```bash
